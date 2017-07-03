@@ -1,8 +1,8 @@
 # Spinners Sass
 
 `npm install --save spinners-sass`
----
 
+---
 ```css
 $primary-color: …
 $box-size: …
@@ -13,6 +13,6 @@ $box-size: …
 <div class="spinners-sass -skeleton"></div>
 <div class="spinners-sass -round"></div>
 ```
----
 
+---
 Based on https://webkul.github.io/csspin
