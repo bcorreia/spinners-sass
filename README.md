@@ -11,9 +11,9 @@ HTML
 ```
 
 SCSS
-```css
-$primary-color: #1DAFEC; // color
-$box-size: 32px; // size
+```bash
+$primary-color: …
+$box-size: …
 @import "../../node_modules/spinners-sass/sass/spinners";
 ```
 
