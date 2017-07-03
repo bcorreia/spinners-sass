@@ -1,0 +1,43 @@
+/* default values
+--------------------------------------------- */
+$primary-color: #1DAFEC !default;
+$background-color: #EAEAEA !default;
+$transparent: transparent !default;
+$box-size: 32px !default;
+$speed: 1s !default;
+
+/* mixins
+--------------------------------------------- */
+@mixin bounding-box($width, $height) {
+    width: $width;
+    height: $height;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+@mixin border($width, $top, $right, $bottom, $left) {
+    border-top: solid $width $top;
+    border-right: solid $width $right;
+    border-bottom: solid $width $bottom;
+    border-left: solid $width $left;
+}
+
+/* spinners sass
+--------------------------------------------- */
+.spinners-sass {
+    @include bounding-box($box-size, $box-size);
+    position: relative;
+}
+
+/* default types
+   remove or comment out not needed types.
+--------------------------------------------- */
+$spinners-types: (
+    round,
+    skeleton
+) !default;
+
+/* types
+--------------------------------------------- */
+@import 'types/skeleton';
+@import 'types/round';

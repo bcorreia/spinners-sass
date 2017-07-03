@@ -1,0 +1,45 @@
+@if index($spinners-types, skeleton) {
+    .spinners-sass {
+        &.-skeleton {
+            border-radius: 50%;
+            @include border($box-size/8, $primary-color, $transparent, $transparent, $transparent);
+            animation: -skeleton-animate $speed linear infinite;
+        }
+
+        &.-skeleton:before {
+            border-radius: 50%;
+            content: "";
+            @include bounding-box($box-size, $box-size);
+            @include border($box-size/8, $transparent, $transparent, $transparent, $primary-color);
+            position: absolute;
+            top: -($box-size/8);
+            left: -($box-size/8);
+            transform: rotateZ(-30deg);
+        }
+
+        &.-skeleton:after {
+            border-radius: 50%;
+            content: "";
+            @include bounding-box($box-size, $box-size);
+            @include border($box-size/8, $transparent, $primary-color, $transparent, $transparent);
+            position: absolute;
+            top: -($box-size/8);
+            right: -($box-size/8);
+            transform: rotateZ(30deg);
+        }
+
+        @keyframes -skeleton-animate {
+            0% {
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: .7;
+            }
+            100% {
+                transform: rotate(360deg);
+                opacity: 1;
+            }
+        }
+    }
+}

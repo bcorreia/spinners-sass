@@ -1,0 +1,33 @@
+@if index($spinners-types, round) {
+    .spinners-sass {
+        &.-round:before {
+            border-radius: 50%;
+            content: "";
+            @include bounding-box($box-size, $box-size);
+            @include border($box-size/8, $background-color, $background-color, $background-color, $background-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &.-round:after {
+            border-radius: 50%;
+            content: "";
+            @include bounding-box($box-size, $box-size);
+            @include border($box-size/8, $primary-color, $transparent, $transparent, $transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: -round-animate $speed ease-in-out infinite;
+        }
+
+        @keyframes -round-animate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

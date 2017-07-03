@@ -1,0 +1,117 @@
+/* default values
+--------------------------------------------- */
+/* mixins
+--------------------------------------------- */
+/* spinners sass
+--------------------------------------------- */
+.spinners-sass {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* default types
+   remove or comment out not needed types.
+--------------------------------------------- */
+/* types
+--------------------------------------------- */
+.spinners-sass.-skeleton {
+  border-radius: 50%;
+  border-top: solid 4px #1DAFEC;
+  border-right: solid 4px transparent;
+  border-bottom: solid 4px transparent;
+  border-left: solid 4px transparent;
+  animation: -skeleton-animate 1s linear infinite;
+}
+
+.spinners-sass.-skeleton:before {
+  border-radius: 50%;
+  content: "";
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 4px transparent;
+  border-right: solid 4px transparent;
+  border-bottom: solid 4px transparent;
+  border-left: solid 4px #1DAFEC;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  transform: rotateZ(-30deg);
+}
+
+.spinners-sass.-skeleton:after {
+  border-radius: 50%;
+  content: "";
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 4px transparent;
+  border-right: solid 4px #1DAFEC;
+  border-bottom: solid 4px transparent;
+  border-left: solid 4px transparent;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  transform: rotateZ(30deg);
+}
+
+@keyframes -skeleton-animate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.spinners-sass.-round:before {
+  border-radius: 50%;
+  content: "";
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 4px #EAEAEA;
+  border-right: solid 4px #EAEAEA;
+  border-bottom: solid 4px #EAEAEA;
+  border-left: solid 4px #EAEAEA;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.spinners-sass.-round:after {
+  border-radius: 50%;
+  content: "";
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 4px #1DAFEC;
+  border-right: solid 4px transparent;
+  border-bottom: solid 4px transparent;
+  border-left: solid 4px transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: -round-animate 1s ease-in-out infinite;
+}
+
+@keyframes -round-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
