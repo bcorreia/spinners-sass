@@ -1,4 +1,2 @@
-# spinners-sass
-Spinners Sass
-
+# Spinners Sass
 Based on https://webkul.github.io/csspin
