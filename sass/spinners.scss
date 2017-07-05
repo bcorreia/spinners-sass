@@ -34,10 +34,12 @@ $speed: 1s !default;
 --------------------------------------------- */
 $spinners-types: (
     round,
-    skeleton
+    skeleton,
+    meter
 ) !default;
 
 /* types
 --------------------------------------------- */
 @import 'types/skeleton';
 @import 'types/round';
+@import 'types/meter';

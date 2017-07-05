@@ -115,3 +115,39 @@
     transform: rotate(360deg);
   }
 }
+
+.spinners-sass.-meter {
+  border-radius: 50%;
+  border-top: solid 4px #1DAFEC;
+  border-right: solid 4px #1DAFEC;
+  border-bottom: solid 4px #1DAFEC;
+  border-left: solid 4px #1DAFEC;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.spinners-sass.-meter:before {
+  border-radius: 2px;
+  content: "";
+  width: 4px;
+  height: 8px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #1DAFEC;
+  position: absolute;
+  top: 4px;
+  left: 10.66666667px;
+  transform-origin: center bottom;
+  animation: meter-animate-before 1s linear infinite;
+}
+
+@keyframes meter-animate-before {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(315deg);
+  }
+}

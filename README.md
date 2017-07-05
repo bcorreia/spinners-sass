@@ -12,6 +12,7 @@ $box-size: …
 ```html
 <div class="spinners-sass -skeleton"></div>
 <div class="spinners-sass -round"></div>
+<div class="spinners-sass -meter"></div>
 ```
 
 ---

@@ -1,0 +1,30 @@
+@if index($spinners-types, meter) {
+    .spinners-sass {
+        &.-meter {
+            border-radius: 50%;
+            @include border($box-size/8, $primary-color, $primary-color ,$primary-color ,$primary-color);
+            @include bounding-box($box-size, $box-size);
+        }
+
+        &.-meter:before {
+            border-radius: $box-size/16;
+            content: "";
+            @include bounding-box($box-size/8, $box-size/4);
+            background-color: $primary-color;
+            position: absolute;
+            top: ceil($box-size/10);
+            left: $box-size/3;
+            transform-origin: center bottom;
+            animation: meter-animate-before $speed linear infinite;
+        }
+
+        @keyframes meter-animate-before {
+            0% {
+                transform: rotate(-45deg);
+            }
+            100% {
+                transform: rotate(315deg);
+            }
+        }
+    }
+}
