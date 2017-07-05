@@ -1,5 +1,7 @@
 # Spinners Sass
 
+[**Demo**](https://bcorreia.github.io/spinners-sass)
+
 `npm install --save spinners-sass`
 
 ---
