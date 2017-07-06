@@ -2,33 +2,36 @@
     .spinners-sass {
         &.-orbits {
             border-radius: 50%;
-            @include bounding-box($box-size, $box-size);
-            @include border($box-size/12, $primary-color, $background-color, $primary-color, $background-color);
+            @extend .rings;
             animation: -orbits-animate $speed linear infinite;
         }
 
         &.-orbits:before {
             content: "";
             position: absolute;
-            top: $box-size/24;
-            left: $box-size/24;
+            top: 0;
+            left: 0;
             border-radius: 50%;
             @include bounding-box($box-size/1.33333, $box-size/1.33333);
-            @include border($box-size/12, $primary-color, $background-color, $primary-color, $background-color);
-            animation: -orbits-animate $speed*2 linear infinite;
-            animation-direction: alternate;
+            @extend .rings;
+            animation: -orbits-animate $speed/.5 linear infinite;
+            // animation-direction: reverse;
         }
 
         &.-orbits:after {
             content: "";
             position: absolute;
-            top: $box-size/6;
-            left: $box-size/6;
+            top: $box-size/8;
+            left: $box-size/8;
             border-radius: 50%;
             @include bounding-box($box-size/2, $box-size/2);
-            @include border($box-size/12, $primary-color, $background-color, $primary-color, $background-color);
-            animation: -orbits-animate $speed*3 linear infinite;
-            animation-direction: reverse;
+            @extend .rings;
+            animation: -orbits-animate $speed/.5 linear infinite;
+            // animation-direction: reverse;
+        }
+
+        &.rings {
+            @include border($box-size/8, $primary-color, $primary-color, $background-color, $background-color);
         }
 
         @keyframes -orbits-animate {

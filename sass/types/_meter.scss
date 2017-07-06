@@ -3,7 +3,6 @@
         &.-meter {
             border-radius: 50%;
             @include border($box-size/8, $primary-color, $primary-color ,$primary-color ,$primary-color);
-            @include bounding-box($box-size, $box-size);
         }
 
         &.-meter:before {
