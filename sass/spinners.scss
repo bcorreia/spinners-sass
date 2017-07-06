@@ -1,9 +1,11 @@
+$box-size: 256px;
+
 /* default values
 --------------------------------------------- */
 $primary-color: #1DAFEC !default;
 $background-color: #EAEAEA !default;
 $transparent: transparent !default;
-$box-size: 32px !default;
+$box-size: 64px !default;
 $speed: 1s !default;
 
 /* mixins
@@ -35,7 +37,8 @@ $speed: 1s !default;
 $spinners-types: (
     round,
     skeleton,
-    meter
+    meter,
+    orbits
 ) !default;
 
 /* types
@@ -43,3 +46,4 @@ $spinners-types: (
 @import 'types/skeleton';
 @import 'types/round';
 @import 'types/meter';
+@import 'types/orbits';

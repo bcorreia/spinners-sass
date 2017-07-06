@@ -15,10 +15,10 @@
             top: ceil($box-size/10);
             left: $box-size/3;
             transform-origin: center bottom;
-            animation: meter-animate-before $speed linear infinite;
+            animation: -meter-animate-before $speed linear infinite;
         }
 
-        @keyframes meter-animate-before {
+        @keyframes -meter-animate-before {
             0% {
                 transform: rotate(-45deg);
             }

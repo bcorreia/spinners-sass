@@ -5,8 +5,8 @@
 /* spinners sass
 --------------------------------------------- */
 .spinners-sass {
-  width: 32px;
-  height: 32px;
+  width: 256px;
+  height: 256px;
   display: inline-block;
   box-sizing: border-box;
   position: relative;
@@ -19,44 +19,44 @@
 --------------------------------------------- */
 .spinners-sass.-skeleton {
   border-radius: 50%;
-  border-top: solid 4px #1DAFEC;
-  border-right: solid 4px transparent;
-  border-bottom: solid 4px transparent;
-  border-left: solid 4px transparent;
+  border-top: solid 32px #1DAFEC;
+  border-right: solid 32px transparent;
+  border-bottom: solid 32px transparent;
+  border-left: solid 32px transparent;
   animation: -skeleton-animate 1s linear infinite;
 }
 
 .spinners-sass.-skeleton:before {
   border-radius: 50%;
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 256px;
+  height: 256px;
   display: inline-block;
   box-sizing: border-box;
-  border-top: solid 4px transparent;
-  border-right: solid 4px transparent;
-  border-bottom: solid 4px transparent;
-  border-left: solid 4px #1DAFEC;
+  border-top: solid 32px transparent;
+  border-right: solid 32px transparent;
+  border-bottom: solid 32px transparent;
+  border-left: solid 32px #1DAFEC;
   position: absolute;
-  top: -4px;
-  left: -4px;
+  top: -32px;
+  left: -32px;
   transform: rotateZ(-30deg);
 }
 
 .spinners-sass.-skeleton:after {
   border-radius: 50%;
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 256px;
+  height: 256px;
   display: inline-block;
   box-sizing: border-box;
-  border-top: solid 4px transparent;
-  border-right: solid 4px #1DAFEC;
-  border-bottom: solid 4px transparent;
-  border-left: solid 4px transparent;
+  border-top: solid 32px transparent;
+  border-right: solid 32px #1DAFEC;
+  border-bottom: solid 32px transparent;
+  border-left: solid 32px transparent;
   position: absolute;
-  top: -4px;
-  right: -4px;
+  top: -32px;
+  right: -32px;
   transform: rotateZ(30deg);
 }
 
@@ -77,14 +77,14 @@
 .spinners-sass.-round:before {
   border-radius: 50%;
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 256px;
+  height: 256px;
   display: inline-block;
   box-sizing: border-box;
-  border-top: solid 4px #EAEAEA;
-  border-right: solid 4px #EAEAEA;
-  border-bottom: solid 4px #EAEAEA;
-  border-left: solid 4px #EAEAEA;
+  border-top: solid 32px #EAEAEA;
+  border-right: solid 32px #EAEAEA;
+  border-bottom: solid 32px #EAEAEA;
+  border-left: solid 32px #EAEAEA;
   position: absolute;
   top: 0;
   left: 0;
@@ -93,14 +93,14 @@
 .spinners-sass.-round:after {
   border-radius: 50%;
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 256px;
+  height: 256px;
   display: inline-block;
   box-sizing: border-box;
-  border-top: solid 4px #1DAFEC;
-  border-right: solid 4px transparent;
-  border-bottom: solid 4px transparent;
-  border-left: solid 4px transparent;
+  border-top: solid 32px #1DAFEC;
+  border-right: solid 32px transparent;
+  border-bottom: solid 32px transparent;
+  border-left: solid 32px transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -118,36 +118,97 @@
 
 .spinners-sass.-meter {
   border-radius: 50%;
-  border-top: solid 4px #1DAFEC;
-  border-right: solid 4px #1DAFEC;
-  border-bottom: solid 4px #1DAFEC;
-  border-left: solid 4px #1DAFEC;
-  width: 32px;
-  height: 32px;
+  border-top: solid 32px #1DAFEC;
+  border-right: solid 32px #1DAFEC;
+  border-bottom: solid 32px #1DAFEC;
+  border-left: solid 32px #1DAFEC;
+  width: 256px;
+  height: 256px;
   display: inline-block;
   box-sizing: border-box;
 }
 
 .spinners-sass.-meter:before {
-  border-radius: 2px;
+  border-radius: 16px;
   content: "";
-  width: 4px;
-  height: 8px;
+  width: 32px;
+  height: 64px;
   display: inline-block;
   box-sizing: border-box;
   background-color: #1DAFEC;
   position: absolute;
-  top: 4px;
-  left: 10.66666667px;
+  top: 26px;
+  left: 85.33333333px;
   transform-origin: center bottom;
-  animation: meter-animate-before 1s linear infinite;
+  animation: -meter-animate-before 1s linear infinite;
 }
 
-@keyframes meter-animate-before {
+@keyframes -meter-animate-before {
   0% {
     transform: rotate(-45deg);
   }
   100% {
     transform: rotate(315deg);
+  }
+}
+
+.spinners-sass.-orbits {
+  border-radius: 50%;
+  width: 256px;
+  height: 256px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 21.33333333px #1DAFEC;
+  border-right: solid 21.33333333px #EAEAEA;
+  border-bottom: solid 21.33333333px #1DAFEC;
+  border-left: solid 21.33333333px #EAEAEA;
+  animation: -orbits-animate 1s linear infinite;
+}
+
+.spinners-sass.-orbits:before {
+  content: "";
+  position: absolute;
+  top: 10.66666667px;
+  left: 10.66666667px;
+  border-radius: 50%;
+  width: 192.00048px;
+  height: 192.00048px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 21.33333333px #1DAFEC;
+  border-right: solid 21.33333333px #EAEAEA;
+  border-bottom: solid 21.33333333px #1DAFEC;
+  border-left: solid 21.33333333px #EAEAEA;
+  animation: -orbits-animate 2s linear infinite;
+  animation-direction: alternate;
+}
+
+.spinners-sass.-orbits:after {
+  content: "";
+  position: absolute;
+  top: 42.66666667px;
+  left: 42.66666667px;
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-top: solid 21.33333333px #1DAFEC;
+  border-right: solid 21.33333333px #EAEAEA;
+  border-bottom: solid 21.33333333px #1DAFEC;
+  border-left: solid 21.33333333px #EAEAEA;
+  animation: -orbits-animate 3s linear infinite;
+  animation-direction: reverse;
+}
+
+@keyframes -orbits-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: .75;
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

@@ -1,0 +1,46 @@
+@if index($spinners-types, orbits) {
+    .spinners-sass {
+        &.-orbits {
+            border-radius: 50%;
+            @include bounding-box($box-size, $box-size);
+            @include border($box-size/12, $primary-color, $background-color, $primary-color, $background-color);
+            animation: -orbits-animate $speed linear infinite;
+        }
+
+        &.-orbits:before {
+            content: "";
+            position: absolute;
+            top: $box-size/24;
+            left: $box-size/24;
+            border-radius: 50%;
+            @include bounding-box($box-size/1.33333, $box-size/1.33333);
+            @include border($box-size/12, $primary-color, $background-color, $primary-color, $background-color);
+            animation: -orbits-animate $speed*2 linear infinite;
+            animation-direction: alternate;
+        }
+
+        &.-orbits:after {
+            content: "";
+            position: absolute;
+            top: $box-size/6;
+            left: $box-size/6;
+            border-radius: 50%;
+            @include bounding-box($box-size/2, $box-size/2);
+            @include border($box-size/12, $primary-color, $background-color, $primary-color, $background-color);
+            animation: -orbits-animate $speed*3 linear infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes -orbits-animate {
+            0%   {
+                transform: rotate(0deg);
+            }
+            50% {
+                opacity: .75;
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
